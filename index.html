@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111b24">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data: https://dbu9btjyfhr28qsx.public.blob.vercel-storage.com; object-src 'none'; base-uri 'self'">
+  <title>OUAT · 故事还未结束</title>
+  <style>body.app-loading{visibility:hidden}</style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="card-face.css?v=card-face-2">
+  <link rel="stylesheet" href="table.css?v=fair-v3-2">
+  <link rel="stylesheet" href="scene-board.css?v=fair-v3-4">
+  <script src="runtime-config.js"></script>
+  <script type="module" src="app.js?v=fair-v3-12"></script>
+</head>
+<body class="app-loading">
+  <div class="storybook-backdrop" aria-hidden="true">
+    <svg class="storybook-map" viewBox="0 0 520 150" preserveAspectRatio="xMidYMid slice">
+      <path class="map-land" d="M0 116C58 78 94 102 142 74S232 42 286 73s88 8 126-15 72-13 108 11v81H0Z"/>
+      <path class="map-river" d="M84 0c38 22 19 42 52 57s42 24 34 45-23 28-8 48"/>
+      <path class="map-road" d="M18 96c47-13 73 20 111 3s43-47 83-39 67 39 101 23 48-44 90-33 57 29 99 9"/>
+      <g class="map-castle"><path d="M323 81h62v43h-62zM317 81V58l16 9 11-24 11 24 15-9v23"/><path d="M330 58V39h10v19M357 58V31h11v27"/><path d="M347 101h12v23h-12z"/></g>
+      <g class="map-trees"><path d="M228 92l10-23 10 23zM235 77l-7-16h14zM260 103l12-29 12 29zM268 82l-8-18h16zM426 96l10-24 10 24zM433 77l-7-16h14z"/></g>
+    </svg>
+    <svg class="storybook-vines" viewBox="0 0 90 700" preserveAspectRatio="none">
+      <path d="M52 0C22 74 76 126 37 196S73 309 32 385s41 139 4 211 14 79 5 104"/>
+      <path d="M48 118c-22-22-37-18-45-4 21 12 31 12 45 4M43 252c24-21 36-20 45-4-18 13-30 15-45 4M38 446c-21-20-33-17-41-3 17 12 28 13 41 3M38 570c23-21 36-17 45-2-17 11-29 13-45 2"/>
+    </svg>
+    <svg class="storybook-vines right" viewBox="0 0 90 700" preserveAspectRatio="none">
+      <path d="M37 0c31 74-23 126 16 196s-36 113 5 189-41 139-4 211-14 79-5 104"/>
+      <path d="M42 118c22-22 37-18 45-4-21 12-31 12-45 4M47 252c-24-21-36-20-45-4 18 13 30 15 45 4M52 446c21-20 33-17 41-3-17 12-28 13-41 3M52 570c-23-21-36-17-45-2 17 11 29 13 45 2"/>
+    </svg>
+  </div>
+  <header class="masthead">
+    <a class="brand" href="./" aria-label="OUAT 故事牌桌"><span class="brand-mark">O</span><span>OUAT<small>故事还未结束</small></span></a>
+    <div class="edition"><span class="status-dot"></span>交互试玩 <span class="edition-divider">/</span> THE FIRST CHAPTER</div>
+    <div class="header-actions"><button id="sync" class="icon-button" aria-label="同步对局">↻</button><button id="reset" class="quiet-button">重新开场</button></div>
+  </header>
+  <div class="mode-note" id="mode-note">样例模式 · 固定 AI 开场 / 仅按牌名生成机会，不作正式语义判定</div>
+  <div class="mode-note"><button id="cloud-judge" class="secondary-button">使用云端裁判判定本段</button></div>
+  <div id="error" class="error-banner" role="alert" hidden></div>
+  <main class="table-shell">
+    <div id="priority-order" class="priority-order" hidden></div>
+    <aside class="sidebar">
+      <div class="overline">THE TABLE <span>01 — 04</span></div>
+      <h2>围坐在故事旁</h2>
+      <div class="deck-meta"><button id="draw-pile" type="button" disabled title="零手牌失去叙事权时可选择抽一张">抽牌 <b id="deck-count">—</b></button><button id="begin_exchange" type="button" disabled title="轮到你主动出牌时可换牌：先抽一张，再弃一张并交权">换牌</button><span id="discard-pile">弃牌 <b id="discard-count">0</b></span><span>已用 <b id="used-count">—</b></span></div>
+      <section class="guide"><div class="overline">HOW TO PLAY</div><p>让一张牌，<br>改变故事的走向。</p><ol><li>点选发光的手牌</li><li>选择原文中的打断位置</li><li>预览后确认，接过叙事权</li></ol><small>不倒计时。你可以慢慢读。</small></section>
+    </aside>
+    <section class="story-column" aria-labelledby="chapter-title">
+      <div id="history" class="history"></div>
+      <div class="story-surface">
+      <article class="story-paper" aria-label="故事正文">
+        <div class="paper-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="chapter-heading"><div><div class="overline" id="chapter-number">第 1 章</div><h1 id="chapter-title">钟声之后</h1></div><span class="phase-pill" id="phase-label">连接牌桌中</span></div>
+        <div class="paper-top"><span id="narrator-label">故事正在展开</span><span class="paper-flourish">✧</span><span id="pending-label">待确认片段</span></div>
+        <div class="story-reading" tabindex="0" aria-label="故事正文内容">
+        <div id="story-text" class="story-text" aria-label="当前叙述"><p class="loading">正在恢复你的牌桌…</p></div>
+        <div id="story-caption" class="story-caption"></div>
+        </div>
+      </article>
+      </div>
+      <section id="scene-board" aria-label="句子要素场面" hidden></section>
+      <section id="composer" class="composer" hidden>
+        <div class="compose-heading"><h2 id="compose-lead">很久很久以前，有一位冒牌勇者</h2><span id="count">0 / 80</span></div>
+        <p>沿着故事主线继续推进；过渡和接话补充都可以交给 AI 代理。</p>
+        <textarea id="narration" rows="4" maxlength="2000" placeholder="让故事跨越时间、地点或旅途，写下接下来发生的事…" aria-label="你的叙述"></textarea>
+        <div class="compose-tools"><button id="fill-example" class="quiet-button" type="button">由AI进行填充</button><span id="target-label">尚未选择目标牌</span></div>
+        <div id="feedback" class="feedback" role="status"></div>
+      </section>
+      <section id="decision" class="decision" aria-live="polite"></section>
+      <div class="card-actions"><button id="pass_turn" class="quiet-button" hidden>免费交权</button></div>
+      <p class="save-state" id="save-state">预览不会扣牌 · 确认后才结算</p>
+    </section>
+    <div class="player-row" aria-label="玩家与操作">
+      <div id="participants" class="participants" aria-label="其他玩家"></div>
+      <div class="player-actions">
+        <div class="action-row"><button id="secondary" class="secondary-button" hidden></button><button id="primary" class="primary-button" disabled>连接中…</button></div>
+      </div>
+    </div>
+  </main>
+  <div id="game-toast" class="game-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <section class="hand-section" aria-labelledby="hand-title">
+    <div class="hand-heading"><div><span class="overline">YOUR HAND</span><h2 id="hand-title">你的手牌 <span id="hand-count">0</span></h2></div><span id="hand-hint">每张牌，都可能是故事的转折。</span></div>
+    <div id="hand" class="hand" role="group" aria-label="你的手牌"></div>
+  </section>
+  <footer><span>OUAT · WEB PLAYTEST</span><span>故事由你们讲述，规则由牌桌守护。</span><span>样例裁判 ≠ v1.2 AI 裁判</span></footer>
+  <button id="skip-transition" class="skip-transition" hidden disabled>跳过</button>
+  <dialog id="relation-dialog" aria-labelledby="relation-title">
+    <span class="overline">指定要素 · 类型接话或解释关系</span>
+    <h2 id="relation-title"></h2><p id="relation-context"></p>
+    <label for="relation-text">这张牌与目标有什么关系？</label>
+    <p class="relation-help">普通牌可合理引入新内容。类型牌拖到同类发光要素会直接接话；其余情况的说明仅供裁判，通过后还需补写一句兑现关系。</p>
+    <textarea id="relation-text" rows="4" maxlength="200" placeholder="例如：那扇紧锁的门需要一把钥匙才能打开。"></textarea>
+    <span id="relation-count">0 / 200</span><p id="relation-feedback" role="status"></p>
+    <p id="relation-error" role="alert"></p><button id="relation-retry" class="secondary-button" hidden>同步并重试原请求</button>
+    <div class="action-row"><button id="relation-cancel" class="secondary-button">取消</button><button id="relation-submit" class="primary-button">提交判定</button></div>
+  </dialog>
+  <dialog id="reset-dialog"><form method="dialog"><span class="overline">A NEW BEGINNING</span><h2>重新开始这段故事？</h2><p>将按整段接话新规则随机配牌，清除当前游客的试玩进度、回执和本页草稿。保留游客身份；其他游客及正式对局不受影响。</p><div class="action-row"><button value="cancel" class="secondary-button">继续保留</button><button value="reset" class="primary-button">重新开场</button></div></form></dialog>
+  <noscript>请启用 JavaScript 来运行网页试玩。</noscript>
+</body>
+</html>

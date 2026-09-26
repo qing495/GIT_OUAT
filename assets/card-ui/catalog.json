@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "C01",
+    "kind": "story",
+    "theme": "character",
+    "name": "骑士",
+    "description": "明确具有骑士身份；普通披甲士兵不自动算骑士",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/C01.png"
+  },
+  {
+    "id": "C02",
+    "kind": "story",
+    "theme": "character",
+    "name": "佣兵",
+    "description": "以报酬受雇作战或护卫的人",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/C02.png"
+  },
+  {
+    "id": "C03",
+    "kind": "story",
+    "theme": "character",
+    "name": "猎人",
+    "description": "以狩猎、追踪野兽为主要身份的人",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/C03.png"
+  },
+  {
+    "id": "C04",
+    "kind": "story",
+    "theme": "character",
+    "name": "盗贼",
+    "description": "明确从事偷窃、潜入或劫掠的人",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/C04.png"
+  },
+  {
+    "id": "C05",
+    "kind": "story",
+    "theme": "character",
+    "name": "商人",
+    "description": "以买卖、行商、交易为身份的人",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/C05.png"
+  },
+  {
+    "id": "C06",
+    "kind": "story",
+    "theme": "character",
+    "name": "铁匠",
+    "description": "锻造或修理金属器具、武器的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C06.png"
+  },
+  {
+    "id": "C07",
+    "kind": "story",
+    "theme": "character",
+    "name": "医师",
+    "description": "以治疗伤病为职责的人；单纯会急救不一定成立",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C07.png"
+  },
+  {
+    "id": "C08",
+    "kind": "story",
+    "theme": "character",
+    "name": "祭司",
+    "description": "具有宗教祭祀、祈祷或神职身份的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C08.png"
+  },
+  {
+    "id": "C09",
+    "kind": "story",
+    "theme": "character",
+    "name": "法师",
+    "description": "能够主动施展魔法的施法者",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C09.png"
+  },
+  {
+    "id": "C10",
+    "kind": "story",
+    "theme": "character",
+    "name": "炼金术师",
+    "description": "以炼金、药剂、物质转化为专长的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C10.png"
+  },
+  {
+    "id": "C11",
+    "kind": "story",
+    "theme": "character",
+    "name": "吟游诗人",
+    "description": "以歌谣、故事、演奏谋生或行动的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C11.png"
+  },
+  {
+    "id": "C12",
+    "kind": "story",
+    "theme": "character",
+    "name": "学者",
+    "description": "以研究、记录、古文献知识为专长的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C12.png"
+  },
+  {
+    "id": "C13",
+    "kind": "story",
+    "theme": "character",
+    "name": "侦察兵",
+    "description": "负责侦察、探路、传递敌情的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C13.png"
+  },
+  {
+    "id": "C14",
+    "kind": "story",
+    "theme": "character",
+    "name": "领主",
+    "description": "拥有领地或统治权的贵族、封建领主",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C14.png"
+  },
+  {
+    "id": "C15",
+    "kind": "story",
+    "theme": "character",
+    "name": "卫兵",
+    "description": "承担守门、巡逻、看守职责的武装人员",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C15.png"
+  },
+  {
+    "id": "C16",
+    "kind": "story",
+    "theme": "character",
+    "name": "农夫",
+    "description": "以耕作、畜牧为主要生计的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C16.png"
+  },
+  {
+    "id": "C17",
+    "kind": "story",
+    "theme": "character",
+    "name": "囚徒",
+    "description": "当前被监禁、拘押或看守的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C17.png"
+  },
+  {
+    "id": "C18",
+    "kind": "story",
+    "theme": "character",
+    "name": "隐士",
+    "description": "主动远离聚落、长期独居的人",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C18.png"
+  },
+  {
+    "id": "C19",
+    "kind": "story",
+    "theme": "character",
+    "name": "哥布林",
+    "description": "明确为哥布林个体或群体",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C19.png"
+  },
+  {
+    "id": "C20",
+    "kind": "story",
+    "theme": "character",
+    "name": "兽人",
+    "description": "明确为兽人个体或群体",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C20.png"
+  },
+  {
+    "id": "C21",
+    "kind": "story",
+    "theme": "character",
+    "name": "矮人",
+    "description": "明确为奇幻种族“矮人”",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C21.png"
+  },
+  {
+    "id": "C22",
+    "kind": "story",
+    "theme": "character",
+    "name": "精灵",
+    "description": "明确为奇幻种族“精灵”",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C22.png"
+  },
+  {
+    "id": "C23",
+    "kind": "story",
+    "theme": "character",
+    "name": "巨人",
+    "description": "体型远超常人的巨人种族或个体",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C23.png"
+  },
+  {
+    "id": "C24",
+    "kind": "story",
+    "theme": "character",
+    "name": "巨龙",
+    "description": "明确为龙类大型魔法生物；普通蜥蜴不算",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/C24.png"
+  },
+  {
+    "id": "T01",
+    "kind": "story",
+    "theme": "thing",
+    "name": "长剑",
+    "description": "剑、长剑等以剑身为主的近战武器",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/T01.png"
+  },
+  {
+    "id": "T02",
+    "kind": "story",
+    "theme": "thing",
+    "name": "盾牌",
+    "description": "用于格挡、守护的盾",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/T02.png"
+  },
+  {
+    "id": "T03",
+    "kind": "story",
+    "theme": "thing",
+    "name": "弓箭",
+    "description": "弓与箭，或明确使用弓射击",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/T03.png"
+  },
+  {
+    "id": "T04",
+    "kind": "story",
+    "theme": "thing",
+    "name": "匕首",
+    "description": "短刃、匕首等小型近战武器",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/T04.png"
+  },
+  {
+    "id": "T05",
+    "kind": "story",
+    "theme": "thing",
+    "name": "地图",
+    "description": "用于标示地点、路线或地形的地图",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T05.png"
+  },
+  {
+    "id": "T06",
+    "kind": "story",
+    "theme": "thing",
+    "name": "钥匙",
+    "description": "用于开启锁具、机关或封闭物的钥匙",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/T06.png"
+  },
+  {
+    "id": "T07",
+    "kind": "story",
+    "theme": "thing",
+    "name": "提灯",
+    "description": "灯笼、提灯等可携带照明器具",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T07.png"
+  },
+  {
+    "id": "T08",
+    "kind": "story",
+    "theme": "thing",
+    "name": "绳索",
+    "description": "绳、缆绳等可捆绑、攀爬、牵引的绳具",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T08.png"
+  },
+  {
+    "id": "T09",
+    "kind": "story",
+    "theme": "thing",
+    "name": "药剂",
+    "description": "可饮用或使用并产生特殊效果的药剂",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T09.png"
+  },
+  {
+    "id": "T10",
+    "kind": "story",
+    "theme": "thing",
+    "name": "药草",
+    "description": "用于治疗、炼药或辨识的草药",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T10.png"
+  },
+  {
+    "id": "T11",
+    "kind": "story",
+    "theme": "thing",
+    "name": "魔法书",
+    "description": "记录法术、仪式或奥术知识的书册",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T11.png"
+  },
+  {
+    "id": "T12",
+    "kind": "story",
+    "theme": "thing",
+    "name": "魔法石",
+    "description": "具有明确魔力的宝石、晶石或核心",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T12.png"
+  },
+  {
+    "id": "T13",
+    "kind": "story",
+    "theme": "thing",
+    "name": "护符",
+    "description": "佩戴或携带以护佑、驱邪、施加效果的饰物",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T13.png"
+  },
+  {
+    "id": "T14",
+    "kind": "story",
+    "theme": "thing",
+    "name": "印章戒指",
+    "description": "可证明身份、权力或用于封印文书的戒指",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T14.png"
+  },
+  {
+    "id": "T15",
+    "kind": "story",
+    "theme": "thing",
+    "name": "钱袋",
+    "description": "装有钱币、报酬或盘缠的钱袋",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T15.png"
+  },
+  {
+    "id": "T16",
+    "kind": "story",
+    "theme": "thing",
+    "name": "宝箱",
+    "description": "用于存放财宝、物资或秘密物件的箱子",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T16.png"
+  },
+  {
+    "id": "T17",
+    "kind": "story",
+    "theme": "thing",
+    "name": "密封信",
+    "description": "被封缄、需递送或内容重要的信件",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T17.png"
+  },
+  {
+    "id": "T18",
+    "kind": "story",
+    "theme": "thing",
+    "name": "号角",
+    "description": "用于发出远距离信号、召集或警报的号角",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T18.png"
+  },
+  {
+    "id": "T19",
+    "kind": "story",
+    "theme": "thing",
+    "name": "镣铐",
+    "description": "用于束缚囚犯的锁链、手铐、脚镣",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T19.png"
+  },
+  {
+    "id": "T20",
+    "kind": "story",
+    "theme": "thing",
+    "name": "马车",
+    "description": "由牲畜牵引、用于载人或载货的车辆",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/T20.png"
+  },
+  {
+    "id": "P01",
+    "kind": "story",
+    "theme": "place",
+    "name": "村庄",
+    "description": "规模较小的乡村聚落",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/P01.png"
+  },
+  {
+    "id": "P02",
+    "kind": "story",
+    "theme": "place",
+    "name": "城镇",
+    "description": "有街道、商铺、居民区的较大聚落",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/P02.png"
+  },
+  {
+    "id": "P03",
+    "kind": "story",
+    "theme": "place",
+    "name": "城堡",
+    "description": "领主或贵族居住、防守的城堡建筑群",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/P03.png"
+  },
+  {
+    "id": "P04",
+    "kind": "story",
+    "theme": "place",
+    "name": "要塞",
+    "description": "以军事防御为主要用途的堡垒、关塞",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/P04.png"
+  },
+  {
+    "id": "P05",
+    "kind": "story",
+    "theme": "place",
+    "name": "旅店",
+    "description": "提供住宿、饮食或消息交换的客店、酒馆式旅店",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/P05.png"
+  },
+  {
+    "id": "P06",
+    "kind": "story",
+    "theme": "place",
+    "name": "集市",
+    "description": "集中交易、摆摊、买卖商品的市场区域",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P06.png"
+  },
+  {
+    "id": "P07",
+    "kind": "story",
+    "theme": "place",
+    "name": "修道院",
+    "description": "修士或宗教团体居住、修行的院落",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P07.png"
+  },
+  {
+    "id": "P08",
+    "kind": "story",
+    "theme": "place",
+    "name": "神殿",
+    "description": "进行祭祀、礼拜或神圣仪式的建筑",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P08.png"
+  },
+  {
+    "id": "P09",
+    "kind": "story",
+    "theme": "place",
+    "name": "森林",
+    "description": "大面积林地或密林",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P09.png"
+  },
+  {
+    "id": "P10",
+    "kind": "story",
+    "theme": "place",
+    "name": "山脉",
+    "description": "山地、高山或连绵山岭",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P10.png"
+  },
+  {
+    "id": "P11",
+    "kind": "story",
+    "theme": "place",
+    "name": "山洞",
+    "description": "天然洞穴、洞窟",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P11.png"
+  },
+  {
+    "id": "P12",
+    "kind": "story",
+    "theme": "place",
+    "name": "矿井",
+    "description": "人工开采矿石的地下坑道、矿洞",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P12.png"
+  },
+  {
+    "id": "P13",
+    "kind": "story",
+    "theme": "place",
+    "name": "沼泽",
+    "description": "泥泞、积水的湿地",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P13.png"
+  },
+  {
+    "id": "P14",
+    "kind": "story",
+    "theme": "place",
+    "name": "河流",
+    "description": "自然河道、急流或大河",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P14.png"
+  },
+  {
+    "id": "P15",
+    "kind": "story",
+    "theme": "place",
+    "name": "石桥",
+    "description": "跨越河谷、道路的桥梁；木桥也可在语义等价时成立",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P15.png"
+  },
+  {
+    "id": "P16",
+    "kind": "story",
+    "theme": "place",
+    "name": "山口",
+    "description": "穿越山地的隘口、关口",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P16.png"
+  },
+  {
+    "id": "P17",
+    "kind": "story",
+    "theme": "place",
+    "name": "港口",
+    "description": "船只停靠、装卸或出海的码头港区",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P17.png"
+  },
+  {
+    "id": "P18",
+    "kind": "story",
+    "theme": "place",
+    "name": "战场",
+    "description": "正在或曾经发生大规模战斗的区域",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P18.png"
+  },
+  {
+    "id": "P19",
+    "kind": "story",
+    "theme": "place",
+    "name": "地牢",
+    "description": "用于囚禁、拷问或看守的地下牢狱",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P19.png"
+  },
+  {
+    "id": "P20",
+    "kind": "story",
+    "theme": "place",
+    "name": "废墟",
+    "description": "已经毁坏、荒废的建筑或聚落遗址",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P20.png"
+  },
+  {
+    "id": "P21",
+    "kind": "story",
+    "theme": "place",
+    "name": "高塔",
+    "description": "明显高耸、可登临或被封闭的塔楼",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/P21.png"
+  },
+  {
+    "id": "A01",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "受伤",
+    "description": "人物当前受到伤害并具有伤势",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/A01.png"
+  },
+  {
+    "id": "A02",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "中毒",
+    "description": "人物或生物受到毒素影响",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/A02.png"
+  },
+  {
+    "id": "A03",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "受诅咒",
+    "description": "人物、地点或物件受到超自然诅咒",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/A03.png"
+  },
+  {
+    "id": "A04",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "疲惫",
+    "description": "人物因劳累、缺乏休息而明显虚弱",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/A04.png"
+  },
+  {
+    "id": "A05",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "失踪",
+    "description": "某个应当能被找到的人或物目前下落不明",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A05.png"
+  },
+  {
+    "id": "A06",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "伪装",
+    "description": "通过服装、魔法或身份掩饰让自己看起来像别的对象",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A06.png"
+  },
+  {
+    "id": "A07",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "隐藏",
+    "description": "人物、物件、入口或信息被有意藏起",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A07.png"
+  },
+  {
+    "id": "A08",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "被盗",
+    "description": "物件或财物已经被他人偷走",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A08.png"
+  },
+  {
+    "id": "A09",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "破损",
+    "description": "物件、建筑、设施已经损坏，无法正常使用或状态异常",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A09.png"
+  },
+  {
+    "id": "A10",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "失明",
+    "description": "人物或生物无法正常视物",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A10.png"
+  },
+  {
+    "id": "A11",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "被封印",
+    "description": "对象被魔法、仪式、机关或禁制限制、封闭",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A11.png"
+  },
+  {
+    "id": "A12",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "被遗弃",
+    "description": "地点、物件或人物被明确抛下、无人照管",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A12.png"
+  },
+  {
+    "id": "A13",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "古老",
+    "description": "对象具有久远年代、古代来源",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A13.png"
+  },
+  {
+    "id": "A14",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "神圣",
+    "description": "对象被宗教、神祇或仪式明确视为神圣",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A14.png"
+  },
+  {
+    "id": "A15",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "禁忌",
+    "description": "知识、地点、行为或物件被明确禁止接触或使用",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A15.png"
+  },
+  {
+    "id": "A16",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "附魔",
+    "description": "物件或地点具有被赋予的魔法效果",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A16.png"
+  },
+  {
+    "id": "A17",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "贵重",
+    "description": "对象具有高昂价值并被故事明确重视",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A17.png"
+  },
+  {
+    "id": "A18",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "伪造",
+    "description": "物件、文书、身份凭证等是仿造或假的",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A18.png"
+  },
+  {
+    "id": "A19",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "危险",
+    "description": "对象或地点被明确表现为会造成实际威胁",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A19.png"
+  },
+  {
+    "id": "A20",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "可疑",
+    "description": "人物、行为、物件或地点出现足以引起怀疑的异常",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A20.png"
+  },
+  {
+    "id": "A21",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "忠诚",
+    "description": "人物以行动表现出对同伴、誓言或所属方的忠诚",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A21.png"
+  },
+  {
+    "id": "A22",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "贪婪",
+    "description": "人物因过度追求财富、权力或占有而行动",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A22.png"
+  },
+  {
+    "id": "A23",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "勇敢",
+    "description": "人物在明确危险面前仍主动承担风险",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/A23.png"
+  },
+  {
+    "id": "A24",
+    "kind": "story",
+    "theme": "aspect",
+    "name": "恐惧",
+    "description": "人物正在害怕、畏惧，并因此产生明显反应",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/A24.png"
+  },
+  {
+    "id": "E01",
+    "kind": "story",
+    "theme": "event",
+    "name": "相遇",
+    "description": "两个此前分离的角色或团体实际碰面、接触",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/E01.png"
+  },
+  {
+    "id": "E02",
+    "kind": "story",
+    "theme": "event",
+    "name": "伏击",
+    "description": "一方隐藏并突然袭击另一方",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/E02.png"
+  },
+  {
+    "id": "E03",
+    "kind": "story",
+    "theme": "event",
+    "name": "战斗",
+    "description": "双方发生实际武力冲突；单纯威胁不算",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/E03.png"
+  },
+  {
+    "id": "E04",
+    "kind": "story",
+    "theme": "event",
+    "name": "启程",
+    "description": "角色明确开始一段新的旅途或任务行程",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/E04.png"
+  },
+  {
+    "id": "E05",
+    "kind": "story",
+    "theme": "event",
+    "name": "追逐",
+    "description": "一方持续追赶另一方，后者试图摆脱",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E05.png"
+  },
+  {
+    "id": "E06",
+    "kind": "story",
+    "theme": "event",
+    "name": "逃亡",
+    "description": "角色从危险、追捕、监禁或灾难中主动逃离",
+    "tone": null,
+    "interrupt": true,
+    "art": "assets/card-art-v2/E06.png"
+  },
+  {
+    "id": "E07",
+    "kind": "story",
+    "theme": "event",
+    "name": "被捕",
+    "description": "角色被敌方、卫兵或其他势力实际控制、拘押",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E07.png"
+  },
+  {
+    "id": "E08",
+    "kind": "story",
+    "theme": "event",
+    "name": "营救",
+    "description": "角色采取行动使被困、被捕或受威胁者脱离危险",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E08.png"
+  },
+  {
+    "id": "E09",
+    "kind": "story",
+    "theme": "event",
+    "name": "交易",
+    "description": "双方以物品、金钱、服务或条件进行交换",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E09.png"
+  },
+  {
+    "id": "E10",
+    "kind": "story",
+    "theme": "event",
+    "name": "争执",
+    "description": "角色之间发生明确争吵、冲突或激烈分歧，但未必动武",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E10.png"
+  },
+  {
+    "id": "E11",
+    "kind": "story",
+    "theme": "event",
+    "name": "背叛",
+    "description": "角色违背既有信任、阵营或承诺并帮助对立方",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E11.png"
+  },
+  {
+    "id": "E12",
+    "kind": "story",
+    "theme": "event",
+    "name": "偷窃",
+    "description": "有人实际窃取不属于自己的物品",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E12.png"
+  },
+  {
+    "id": "E13",
+    "kind": "story",
+    "theme": "event",
+    "name": "发现线索",
+    "description": "角色获得能推进调查、寻路或解释谜团的新证据",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E13.png"
+  },
+  {
+    "id": "E14",
+    "kind": "story",
+    "theme": "event",
+    "name": "找到目标",
+    "description": "角色找到此前正在寻找的人、物或地点",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E14.png"
+  },
+  {
+    "id": "E15",
+    "kind": "story",
+    "theme": "event",
+    "name": "迷路",
+    "description": "角色无法确定正确路线或当前位置",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E15.png"
+  },
+  {
+    "id": "E16",
+    "kind": "story",
+    "theme": "event",
+    "name": "抵达",
+    "description": "角色到达此前计划前往或长途寻找的目的地",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E16.png"
+  },
+  {
+    "id": "E17",
+    "kind": "story",
+    "theme": "event",
+    "name": "暴风雨",
+    "description": "强风、暴雨、雷暴、暴雪等恶劣天气实际影响当前行动",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E17.png"
+  },
+  {
+    "id": "E18",
+    "kind": "story",
+    "theme": "event",
+    "name": "坍塌",
+    "description": "建筑、洞穴、桥梁等结构发生倒塌或塌方",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E18.png"
+  },
+  {
+    "id": "E19",
+    "kind": "story",
+    "theme": "event",
+    "name": "火灾",
+    "description": "失控或大规模火焰对地点、人物或行动造成影响",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E19.png"
+  },
+  {
+    "id": "E20",
+    "kind": "story",
+    "theme": "event",
+    "name": "仪式",
+    "description": "角色正式进行具有魔法、宗教或誓约意义的仪式",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E20.png"
+  },
+  {
+    "id": "E21",
+    "kind": "story",
+    "theme": "event",
+    "name": "变形",
+    "description": "人物或生物实际变成另一种形态",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E21.png"
+  },
+  {
+    "id": "E22",
+    "kind": "story",
+    "theme": "event",
+    "name": "死亡",
+    "description": "一个已存在的重要人物或生物明确死亡",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E22.png"
+  },
+  {
+    "id": "E23",
+    "kind": "story",
+    "theme": "event",
+    "name": "治愈",
+    "description": "伤病、中毒或其他身体异常得到实际治疗并改善",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E23.png"
+  },
+  {
+    "id": "E24",
+    "kind": "story",
+    "theme": "event",
+    "name": "立誓",
+    "description": "角色明确作出具有约束意义的誓言、承诺",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E24.png"
+  },
+  {
+    "id": "E25",
+    "kind": "story",
+    "theme": "event",
+    "name": "围攻",
+    "description": "一方持续包围并攻击有防御设施的地点",
+    "tone": null,
+    "interrupt": false,
+    "art": "assets/card-art-v2/E25.png"
+  },
+  {
+    "id": "F01",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "强敌已败",
+    "description": "主要敌人或魔物被击败，受威胁的人们确认安全。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F01.png"
+  },
+  {
+    "id": "F02",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "放逐祸患",
+    "description": "主要敌人没有被杀死，但被驱逐，并失去继续威胁此地的能力。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F02.png"
+  },
+  {
+    "id": "F03",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "围城解困",
+    "description": "围攻被解除，封闭的城门或道路重新开放。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F03.png"
+  },
+  {
+    "id": "F04",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "诅咒消散",
+    "description": "贯穿故事的诅咒被解除，受影响的人或地方恢复正常。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F04.png"
+  },
+  {
+    "id": "F05",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "仪式中断",
+    "description": "一个危险仪式在完成前被阻止，最坏的后果没有发生。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F05.png"
+  },
+  {
+    "id": "F06",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "阴谋瓦解",
+    "description": "真正的叛徒或阴谋者被揭露，并失去继续实施计划的能力。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F06.png"
+  },
+  {
+    "id": "F07",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "重获自由",
+    "description": "被囚禁或被劫持的人获得自由，追捕者无法再把他们带回去。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F07.png"
+  },
+  {
+    "id": "F08",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "灾后余生",
+    "description": "一场足以毁掉聚落的灾难被控制下来，居民得以幸存。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F08.png"
+  },
+  {
+    "id": "F09",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "魔器终寂",
+    "description": "最危险的魔法物件被封印或摧毁，从此无法再被任何一方使用。",
+    "tone": "威胁终结",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F09.png"
+  },
+  {
+    "id": "F10",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "终抵彼方",
+    "description": "冒险者终于抵达一开始真正想去的地方，旅程在此完成。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F10.png"
+  },
+  {
+    "id": "F11",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "绝境脱身",
+    "description": "众人在危险地点彻底封闭或毁灭之前成功逃出。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F11.png"
+  },
+  {
+    "id": "F12",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "游子归家",
+    "description": "失散已久的旅人终于回到自己的家。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F12.png"
+  },
+  {
+    "id": "F13",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "同伴重聚",
+    "description": "失踪的同伴与等待他的人重新团聚。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F13.png"
+  },
+  {
+    "id": "F14",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "物归原主",
+    "description": "一路寻找的物件被送回它真正的主人手中。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F14.png"
+  },
+  {
+    "id": "F15",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "通途重开",
+    "description": "原本无法通行的道路重新畅通，人们再次能够安全往来。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F15.png"
+  },
+  {
+    "id": "F16",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "归来述历",
+    "description": "冒险者回到出发时的聚落，并把这段经历完整讲给等候的人。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F16.png"
+  },
+  {
+    "id": "F17",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "异乡安居",
+    "description": "其中一人决定不再回到旧生活，而是在旅途中找到的新地方定居。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F17.png"
+  },
+  {
+    "id": "F18",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "越界脱险",
+    "description": "众人越过最后一道边界，把追兵与危险永远留在身后。",
+    "tone": "旅程与归还",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F18.png"
+  },
+  {
+    "id": "F19",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "酬劳兑现",
+    "description": "委托人履行最初的约定，向完成任务的人支付报酬。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F19.png"
+  },
+  {
+    "id": "F20",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "散财济困",
+    "description": "冒险者放弃大部分本可属于自己的财宝，用它救助了别人。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F20.png"
+  },
+  {
+    "id": "F21",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "同享硕果",
+    "description": "众人没有为战利品反目，而是公平分配了获得的财富。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F21.png"
+  },
+  {
+    "id": "F22",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "重建家园",
+    "description": "找到的财富被用来重建遭到破坏的村镇或家园。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F22.png"
+  },
+  {
+    "id": "F23",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "重掌权柄",
+    "description": "真正有资格承担统治责任的人重新取得了原本失去的位置。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F23.png"
+  },
+  {
+    "id": "F24",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "改立新主",
+    "description": "原来的统治者失去权力，而当地人接受了新的领导者。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F24.png"
+  },
+  {
+    "id": "F25",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "荣耀加身",
+    "description": "一个原本身份普通的人因这次冒险获得正式的荣誉或头衔。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F25.png"
+  },
+  {
+    "id": "F26",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "遗物托付",
+    "description": "重要的遗物没有被任何冒险者占有，而是交给新的守护者保管。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F26.png"
+  },
+  {
+    "id": "F27",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "辞赏而去",
+    "description": "众人拒绝了本应得到的奖赏，按照自己的意愿离开。",
+    "tone": "奖赏与责任",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F27.png"
+  },
+  {
+    "id": "F28",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "宿敌释怨",
+    "description": "曾经互为敌人的双方达成停战，并决定不再继续旧日仇恨。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F28.png"
+  },
+  {
+    "id": "F29",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "守诺到底",
+    "description": "有人付出实际代价，仍兑现了自己在旅途中立下的承诺。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F29.png"
+  },
+  {
+    "id": "F30",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "重拾信任",
+    "description": "被破坏的信任通过坦白真相和实际行动重新建立。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F30.png"
+  },
+  {
+    "id": "F31",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "补过得谅",
+    "description": "犯下错误的人完成补偿，并最终得到受害者的原谅。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F31.png"
+  },
+  {
+    "id": "F32",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "服输结盟",
+    "description": "曾经的竞争者承认失败，不再争夺目标，并成为新的盟友。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F32.png"
+  },
+  {
+    "id": "F33",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "后会有期",
+    "description": "同伴们在任务完成后各自离开，但约定将来还会再次相见。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F33.png"
+  },
+  {
+    "id": "F34",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "留守一方",
+    "description": "其中一人自愿留在当地承担新的责任，其他人继续踏上归途。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F34.png"
+  },
+  {
+    "id": "F35",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "阖家同心",
+    "description": "因冲突或误会分裂的一家人终于重新站到一起。",
+    "tone": "关系与选择",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F35.png"
+  },
+  {
+    "id": "F36",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "身份大白",
+    "description": "某人的真实身份被公开，过去看似矛盾的行为因此得到解释。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F36.png"
+  },
+  {
+    "id": "F37",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "沉冤昭雪",
+    "description": "被指控的人被证明无罪，真正的证据使指控无法继续。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F37.png"
+  },
+  {
+    "id": "F38",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "幕后真凶",
+    "description": "真正的幕后犯人被最后一条关键线索揭露。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F38.png"
+  },
+  {
+    "id": "F39",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "怪物守护",
+    "description": "众人发现一直恐惧的怪物其实是在守护某样东西，冲突因此终止。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F39.png"
+  },
+  {
+    "id": "F40",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "宝梦成空",
+    "description": "众人争夺的“宝物”最终被证明是赝品或根本没有他们想象的价值。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F40.png"
+  },
+  {
+    "id": "F41",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "传说真相",
+    "description": "一个被当成传说的古老故事被证明基本属实，但真相与流传版本并不相同。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F41.png"
+  },
+  {
+    "id": "F42",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "旧史重见",
+    "description": "被刻意掩埋的历史终于公开，此后再也无法用旧谎言维持现状。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F42.png"
+  },
+  {
+    "id": "F43",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "预言异解",
+    "description": "故事中的预言确实实现了，但实现方式与所有人的理解都不同。",
+    "tone": "真相与反转",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F43.png"
+  },
+  {
+    "id": "F44",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "人存物毁",
+    "description": "众人活了下来，但一路寻找的重要物件在最后被彻底毁掉。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F44.png"
+  },
+  {
+    "id": "F45",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "失利救人",
+    "description": "主要敌人带着想要的东西成功逃走，但冒险者至少救下了眼前的人。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F45.png"
+  },
+  {
+    "id": "F46",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "别土求生",
+    "description": "原来的家园已经无法挽回，幸存者只能前往新的地方重新生活。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F46.png"
+  },
+  {
+    "id": "F47",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "断后未归",
+    "description": "一名同伴选择留下阻挡危险，让其他人得以逃走，而她没有回来。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F47.png"
+  },
+  {
+    "id": "F48",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "与咒共生",
+    "description": "诅咒最终无法解除，承受诅咒的人决定接受它并继续生活。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F48.png"
+  },
+  {
+    "id": "F49",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "叛者得志",
+    "description": "背叛者得到了她想要的权力或财富，其他人只能带着失败离开。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F49.png"
+  },
+  {
+    "id": "F50",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "知止而返",
+    "description": "众人始终没有找到最初追寻的目标，最后决定活着返回，而不是继续冒险。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F50.png"
+  },
+  {
+    "id": "F51",
+    "kind": "ending",
+    "theme": "ending",
+    "name": "最后见证",
+    "description": "最后只有一名幸存者回到文明世界，并把发生的一切告诉了别人。",
+    "tone": "苦涩与失败",
+    "interrupt": false,
+    "art": "assets/card-art-v2/F51.png"
+  }
+]

@@ -1,0 +1,12 @@
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+
+# Runtime media is hosted by Vercel Blob. Keep only catalog metadata here.
+assets/card-art-v2/*.png
+assets/card-ui/*.png
+assets/card-ui/*.svg
+assets/card-art-v2/records/
+assets/card-art-v2/manifest.json

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#193533">
+  <title>OUAT · 卡牌工坊</title>
+  <link rel="stylesheet" href="card-face.css"><link rel="stylesheet" href="card-workshop.css">
+  <script type="module" src="card-workshop.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./">O<span>OUAT<small>故事还未结束</small></span></a><span class="edition">THE CARD ATELIER <i>／</i> 第一辑</span><a class="back-link" href="./">回到牌桌 ↗</a></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">纸上万象 · 一副尚待写下的故事</p><h1>为每个故事，<br>留下一席之地。</h1><p class="intro-copy">五种故事色彩，一枚秘密终章。<br>纸张、枝叶与金线，等待你的故事落笔。</p></div><aside class="intro-note"><span class="note-number">05 <i>＋</i> 01</span><p>五类故事牌 / 独立结局框</p><span class="note-rule"></span><p>故事框 · 圆角细金线<br>结局框 · 切角双金线与菱饰</p></aside></section>
+    <section aria-labelledby="palette-title" class="palette-section"><div class="section-heading"><h2 id="palette-title">牌色与篇章</h2><p>颜色之外，分类文字始终保留。</p></div><div id="palette" class="palette"></div></section>
+    <section aria-labelledby="cards-title" class="cards-section"><div class="section-heading"><div><p class="eyebrow">01 / 全套卡牌</p><h2 id="cards-title">故事从这里开始</h2></div><p id="count" role="status">正在准备卡牌…</p></div>
+      <div class="toolbar"><div class="filters" id="filters" aria-label="卡牌分类"></div><div class="view-options"><label><input type="checkbox" id="bare">只看框架</label><label><input type="checkbox" id="show-art" checked>显示独立插画</label></div></div>
+      <div class="search-row"><label for="search">寻找一张牌</label><input id="search" type="search" placeholder="搜索卡名、编号或结局条件…"><button id="reset" type="button">重置</button></div>
+      <p class="art-note">114 张故事牌与 51 张结局牌，独立插画已全部装入卡面。点击任一卡牌可放大阅读，也可按类别筛选或切换为只看框架。</p>
+      <div id="cards" class="card-grid"></div><p id="empty" class="empty" hidden>没有找到符合条件的卡牌。</p><p id="error" role="alert" hidden></p>
+    </section>
+    <section class="assets-section" aria-labelledby="assets-title"><div class="section-heading"><div><p class="eyebrow">02 / 可复用素材</p><h2 id="assets-title">拆开看，也是一套完整的语言。</h2></div><p>卡框 · 文本底板 · 枝叶 · 纸张</p></div><div id="assets" class="asset-grid"></div></section>
+    <footer class="page-footer"><span>OUAT · 沉浸式绘本</span><p>卡名与说明均为可编辑文本 · 卡牌比例 2:3</p><a href="card-workshop.html">回到页首 ↑</a></footer>
+  </main>
+  <dialog id="detail"><div class="dialog-top"><span id="detail-caption"></span><button id="close" aria-label="关闭卡牌详情">关闭 ×</button></div><div id="detail-card"></div><p id="detail-description"></p></dialog>
+</body>
+</html>

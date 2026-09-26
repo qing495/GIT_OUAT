@@ -1,0 +1,535 @@
+/* Versioned board: old saved games keep their original table. */
+[hidden]{display:none!important}
+body.element-table{--hand-card-width:124px;--hand-height:224px;--story-top:65px;--rail:64px;--right-rail:54px}
+@media(min-width:700px){body.element-table{max-width:1100px}}
+.element-table .story-column{top:65px;left:var(--rail);right:var(--right-rail);bottom:calc(var(--hand-height) + 12px);gap:8px;max-width:900px;margin:auto}
+.element-table .story-surface{flex:0 1 32%;min-height:110px;transform:none;overflow:hidden}
+.element-table .story-paper{height:100%;min-height:0;transform:none!important;padding:12px 15px;gap:5px;border-radius:10px;overflow:hidden}
+.element-table .story-paper .chapter-heading{padding:0;margin:0;gap:4px;flex-direction:row;justify-content:space-between;align-items:center}
+.element-table .story-paper .chapter-heading .overline{display:none}
+.element-table .story-paper .phase-pill{min-width:0;max-width:48%;padding:3px 5px;font-size:9px;letter-spacing:0}
+.element-table .story-paper .paper-top{flex-direction:row;justify-content:space-between;align-items:center;font-size:9px}
+.element-table .story-paper #narrator-label:before{display:none}
+.element-table .chapter-heading h1{font-size:16px}.element-table .chapter-heading .overline{font-size:8px}
+.element-table .paper-top{margin:0;padding-bottom:4px;font-size:9px}.element-table .story-reading{min-height:0;overflow:auto}
+.element-table .story-text{font-size:16px;line-height:1.8}.current-clause{background:#ba975541;color:inherit;border-bottom:2px solid #927137;border-radius:2px}
+.element-table .table-emblem,.element-table .paper-flourish,.element-table .priority-order{display:none}
+.element-table .sidebar{display:contents}
+.element-table .participants{position:static}
+.element-table .participant:not([data-seat="human"]){position:absolute;left:5px!important;right:auto!important;top:calc(155px + var(--seat-index) * 103px)!important;width:52px!important;height:90px;display:flex;flex-direction:column;gap:3px;transform:none}
+.element-table .participant[data-seat="ai-a"]{--seat-index:0}.element-table .participant[data-seat="ai-b"]{--seat-index:1}.element-table .participant[data-seat="ai-c"]{--seat-index:2}
+.element-table .participant:not([data-seat="human"]) .avatar{width:38px;height:38px;font-size:18px}
+.element-table .participant:not([data-seat="human"]) .participant-name{font-size:9px;padding:1px 3px}
+.element-table .participant .participant-role,.element-table .participant:after{display:none}
+.element-table .opponent-hand{position:static;transform:none!important;scale:1;width:44px;height:15px;display:flex;align-items:center;justify-content:center}
+.element-table .opponent-hand .opponent-card{display:none}
+.element-table .participant[data-seat="human"]{left:6px;bottom:8px;width:50px;height:42px;display:none}
+.element-table .deck-meta{position:absolute;top:auto;bottom:calc(var(--hand-height) - 14px);left:0;right:0;transform:none;justify-content:center;z-index:12}
+.element-table .hand-heading{visibility:hidden}.element-table .hand-card{touch-action:none}
+.element-table .hand-section{height:var(--hand-height)}
+.element-table .story-column>.decision{font-size:10px;flex:0 0 auto;max-height:36px;padding:0 3px}
+.element-table .story-column>.action-row{min-height:32px}.element-table .story-column>.action-row button{min-height:32px;padding:5px 8px}
+.element-table .story-column>.card-actions{margin:0}.element-table .table-performance{top:70px;left:var(--rail);right:var(--right-rail);bottom:calc(var(--hand-height) + 14px)}
+#scene-board{display:flex;flex-direction:column;flex:1 1 0;min-height:140px;gap:7px}
+.scene-navigation{display:flex;align-items:center;justify-content:space-between;gap:4px;flex-shrink:0;font-size:10px;color:#cbbb93}
+.scene-navigation button{padding:5px 8px;min-height:30px;border-radius:5px;border:1px solid #8b7b546e;background:#203b3d;color:#ead9b0;font-size:10px}
+.scene-navigation button:disabled{opacity:.4}
+.scene-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:6px;flex:1;min-height:0}
+.grammar-slot{display:flex;flex-direction:column;min-height:0;min-width:0;padding:5px;border:1px solid #a693614a;border-radius:10px;background:linear-gradient(140deg,#203e408c,#0d202bcc);box-shadow:inset 0 3px 8px #0004}
+.grammar-slot h3{margin:0 0 3px;font-size:10px;font-weight:400;text-align:center;color:#b9ae8f;flex-shrink:0}
+.grammar-slot.empty{border-style:dashed;opacity:.55}.element-list{display:flex;flex-direction:column;gap:5px;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.element-card{flex-shrink:0;min-width:0;width:100%;padding:6px 4px;border:1px solid #978658;border-radius:6px;color:#eddfbc;background:linear-gradient(130deg,#456361,#233e42);box-shadow:0 3px 5px #0005;line-height:1.5;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.element-card strong{display:block;font-size:13px;font-weight:500}.element-type{display:block;font-size:8px;color:#b9d9d0;letter-spacing:1px}
+.element-card:disabled{opacity:1;cursor:default}.element-card:focus-visible,.element-card.target-hover{outline:2px solid #9ef1e4;box-shadow:0 0 16px #80e6d5a0}
+.element-card.type-match{border-color:#72caba}.element-card:hover:not(:disabled){background:#3b6261}
+.skip-transition{position:absolute;right:4px;top:43%;width:46px;min-height:60px;border:2px solid #b09a63;border-radius:8px;color:#f3e5c1;background:linear-gradient(#776043,#493d31);font-size:14px;box-shadow:0 5px 0 #302a24,0 6px 15px #0007;z-index:15}
+.skip-transition:disabled{opacity:.45}
+.target-arrow{position:fixed;inset:0;width:100vw;height:100dvh;pointer-events:none;z-index:45;color:#a4c7c1;filter:drop-shadow(0 3px 3px #000)}
+.target-arrow path:not(defs path){fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round}.target-arrow.has-target{color:#93f4d4}
+.targeting-source{filter:brightness(1.2)!important;z-index:44!important}.is-targeting .hand-card:not(.targeting-source){pointer-events:none}
+#relation-dialog{width:min(480px,calc(100vw - 24px));max-height:calc(100dvh - 30px);overflow:auto;border:1px solid #b69d67;border-radius:12px;padding:22px;background:#162e33;color:#ecdfbf;box-shadow:0 20px 80px #000b}
+#relation-dialog::backdrop{background:#051319b8}#relation-dialog h2{font-size:19px;line-height:1.6;margin:10px 0}
+#relation-context{font-size:12px;padding:10px;background:#244047;border-radius:6px;line-height:1.7}
+#relation-dialog label{font-size:14px}.relation-help{font-size:11px;color:#bbc5b6;line-height:1.7}
+#relation-text{box-sizing:border-box;width:100%;min-height:100px;padding:10px;border:1px solid #8a876c;border-radius:6px;background:#f0e5cc;color:#253332;font:16px/1.7 'Microsoft YaHei',sans-serif;resize:vertical}
+#relation-count{display:block;text-align:right;font-size:11px;color:#b9b9a1}#relation-feedback{font-size:13px;line-height:1.6;color:#f0c080;min-height:20px}
+.element-table.authoring .story-surface{display:none}.element-table .composer{flex:1;min-height:130px}
+@media(min-width:700px){body.element-table{--rail:110px;--right-rail:85px;--hand-card-width:144px;--hand-height:248px}.element-table .participant:not([data-seat="human"]){left:26px!important;width:64px!important}.element-table .participant:not([data-seat="human"]) .avatar{width:50px;height:50px}.element-table .story-text{font-size:19px}.element-card strong{font-size:17px}.grammar-slot h3{font-size:12px}.element-type{font-size:10px}.skip-transition{right:20px;width:55px}.scene-navigation{font-size:12px}}
+@media(max-height:740px){body.element-table{--hand-card-width:106px;--hand-height:185px}.element-table .story-column{top:57px;gap:5px}.element-table .story-surface{min-height:94px;flex-basis:29%}.element-table .story-paper{padding:7px 10px}.element-table .chapter-heading{display:none}.element-table .story-text{font-size:14px}.element-table .participant:not([data-seat="human"]){top:calc(130px + var(--seat-index) * 83px)!important}.grammar-slot{padding:3px}.element-card{padding:3px}.element-card strong{font-size:11px}#scene-board{gap:4px;min-height:130px}.scene-grid{gap:4px}.element-table .decision{max-height:26px}}
+@media(max-height:590px){body.element-table{--hand-card-width:82px;--hand-height:140px}.element-table .story-column{overflow-y:auto}.element-table .story-surface{flex:0 0 80px;min-height:80px}#scene-board{flex:0 0 180px}.element-table .participant:not([data-seat="human"]){top:calc(80px + var(--seat-index) * 76px)!important}}
+
+/* Element takeover board: keep the table frontal and let the story sheet use
+   the full width.  Opponent badges are an overlay layer, so they do not reserve
+   a sidebar column or push the sentence scene inward. */
+.element-table .story-column{left:16px;right:16px;max-width:none;bottom:calc(var(--hand-height) + 12px);gap:8px}
+.element-table .story-surface{flex:0 0 clamp(150px,38%,300px);width:100%;min-height:150px;margin:0;transform:none}
+.element-table .story-surface:before{transform:none;box-shadow:0 4px 8px #04141266,0 8px 15px #04141240}
+.element-table .story-paper{transform:none!important}
+.element-table .deck-meta{transform:translateX(-50%);perspective:none}
+.element-table .table-performance{left:16px;right:16px;transform:none}
+.element-table .hand-card{transform:translate(var(--x),var(--y)) rotateZ(var(--angle)) scale(var(--scale,1))!important}
+.element-table .hand-card.focused,.element-table .hand-card.picked{transform:translate(var(--x),calc(var(--y) - 12px)) rotateZ(0deg) scale(var(--scale,1))!important}
+
+/* AI seats float over the story/table edge instead of occupying layout space. */
+.element-table .participant:not([data-seat="human"]){left:4px!important;right:auto!important;top:calc(var(--ai-overlay-top) + var(--seat-index) * var(--ai-overlay-gap))!important;width:72px!important;height:auto;z-index:35;pointer-events:none;transform:none!important}
+.element-table .participant:not([data-seat="human"]) .avatar{width:46px;height:46px;font-size:20px}
+.element-table .participant:not([data-seat="human"]) .participant-info{margin-top:-4px}
+.element-table .participant:not([data-seat="human"]) .participant-name{font-size:10px;padding:2px 5px;white-space:nowrap}
+
+/* Temporary scene cards use the same framed, brass-edged language as a hand
+   card while keeping the illustration area intentionally empty. */
+.element-card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:76px;padding:9px 7px 8px;border:1px solid #a69773;border-radius:7px;background:linear-gradient(145deg,#3d5555,#152b34 75%);box-shadow:inset 0 1px 0 #e0e7c644,1px 2px 0 #777359,2px 4px 0 #102028,0 7px 10px #0008;font-family:"Songti SC",SimSun,serif}
+.element-card:before{content:"";position:absolute;inset:5px;border:1px solid #a48e5b55;border-radius:3px;pointer-events:none}
+.element-card:after{content:"故事元素";position:absolute;top:-7px;left:50%;transform:translateX(-50%);padding:2px 6px;border:1px solid #a18c63;border-radius:4px;background:#c8a561;color:#1a2726;font:8px/1.1 "Microsoft YaHei",sans-serif;white-space:nowrap;box-shadow:0 2px 3px #0006}
+.element-card .element-type{position:relative;font-size:8px;color:#a9d6c9;letter-spacing:1px}
+.element-card strong{position:relative;font-family:"Songti SC",SimSun,serif;font-size:14px;line-height:1.35;letter-spacing:1px;color:#efe2c2;text-shadow:0 1px 2px #0008}
+.element-card[data-category="thing"]{background:linear-gradient(145deg,#5a4933,#30251e 75%)}
+.element-card[data-category="place"]{background:linear-gradient(145deg,#3b5a48,#1d332d 75%)}
+.element-card[data-category="event"]{background:linear-gradient(145deg,#5c3e3b,#321f27 75%)}
+.element-card[data-category="aspect"]{background:linear-gradient(145deg,#3c4e69,#202b45 75%)}
+.element-card[data-category="other"]{background:linear-gradient(145deg,#4b5050,#262c31 75%)}
+.element-card:focus-visible,.element-card.target-hover{outline:2px solid #9ef1e4;outline-offset:2px}
+/* Type-interrupt targets announce the shortcut while a matching card is in
+   flight.  The animation is scoped to targeting so ordinary selected cards
+   keep the same calm board state. */
+.is-targeting.type-targeting .element-card.type-match{border-color:#9ff4da;animation:element-type-breathe 1.15s ease-in-out infinite;box-shadow:0 0 0 1px #8ee8cc66,0 0 18px #71e7c699,inset 0 1px 0 #e0e7c644}
+@keyframes element-type-breathe{0%,100%{filter:brightness(1);transform:translateY(0);box-shadow:0 0 0 1px #8ee8cc55,0 0 10px #71e7c666,inset 0 1px 0 #e0e7c644}50%{filter:brightness(1.24);transform:translateY(-2px);box-shadow:0 0 0 2px #b5ffe5aa,0 0 25px #71e7c6dd,inset 0 1px 0 #f5fff066}}
+@media(prefers-reduced-motion:reduce){.is-targeting.type-targeting .element-card.type-match{animation:none;box-shadow:0 0 0 2px #b5ffe5aa,0 0 16px #71e7c6aa,inset 0 1px 0 #f5fff066}}
+
+@media(max-width:420px){
+  .element-table .story-column{left:10px;right:10px}
+  .element-table .participant:not([data-seat="human"]){left:2px!important;top:calc(68px + var(--seat-index) * 74px)!important;width:60px!important}
+  .element-table .participant:not([data-seat="human"]) .avatar{width:38px;height:38px;font-size:17px}
+  .element-table .participant:not([data-seat="human"]) .participant-name{font-size:9px;padding:1px 4px}
+  .element-card{min-height:64px;padding:7px 4px}
+  .element-card strong{font-size:12px}
+  .scene-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
+}
+@media(max-height:740px){
+  .element-table .story-surface{flex-basis:34%;min-height:132px}
+}
+@media(max-height:590px){
+  .element-table .story-surface{flex-basis:96px;min-height:96px}
+  .element-table .participant:not([data-seat="human"]){top:calc(56px + var(--seat-index) * 62px)!important}
+}
+
+/* Readability and overlay seats: keep the story sheet unobstructed while the
+   opponents remain visible at the left edge of the flat board. */
+body.element-table{
+  --ai-overlay-top:clamp(176px,27dvh,245px);
+  --ai-overlay-gap:clamp(72px,10dvh,92px)
+}
+.element-table .participant:not([data-seat="human"]){
+  top:calc(var(--ai-overlay-top) + var(--seat-index) * var(--ai-overlay-gap))!important;
+  width:78px!important;
+}
+.element-table .participant:not([data-seat="human"]) .avatar{width:44px;height:44px;font-size:20px}
+.element-table .participant:not([data-seat="human"]) .participant-name{font-size:11px;line-height:1.3;padding:2px 5px}
+.element-table .participant:not([data-seat="human"]) .participant-role{display:none}
+.element-table .participant:not([data-seat="human"]) .opponent-hand{
+  position:static;display:flex!important;align-items:center;justify-content:center;
+  width:max-content;min-width:42px;height:18px;margin-top:2px;padding:2px 7px;
+  border:1px solid #a18c6380;border-radius:9px;background:#162e33e8;
+  color:#ead9b0;box-shadow:0 2px 5px #0008;font:11px/1.2 "Microsoft YaHei",sans-serif;
+}
+.element-table .participant:not([data-seat="human"]) .opponent-hand:after{display:none}
+.element-table .participant:not([data-seat="human"]) .opponent-card{display:none!important}
+.element-table .opponent-count{display:block;white-space:nowrap}
+
+/* During a player's writing turn there is no sentence scene below the paper;
+   use the narrow strip above the hand for a compact opponent row instead of
+   placing avatars over the textarea. */
+.element-table.authoring .participant:not([data-seat="human"]){
+  top:calc(100dvh - var(--hand-height) - 9px)!important;
+  bottom:auto!important;
+  width:60px!important;
+  height:42px;
+}
+.element-table.authoring .participant[data-seat="ai-a"]{left:4px!important}
+.element-table.authoring .participant[data-seat="ai-b"]{left:76px!important}
+.element-table.authoring .participant[data-seat="ai-c"]{left:148px!important}
+.element-table.authoring .participant:not([data-seat="human"]) .avatar{width:27px;height:27px;font-size:13px}
+.element-table.authoring .participant:not([data-seat="human"]) .participant-name{font-size:8px;padding:1px 3px}
+.element-table.authoring .participant:not([data-seat="human"]) .opponent-hand{font-size:9px;min-width:32px;height:14px;padding:1px 4px}
+.element-table.authoring .action-row{position:relative;z-index:50}
+
+.element-table .story-text{font-size:clamp(15px,2.1vw,20px);line-height:1.75}
+.element-table .story-paper .phase-pill{font-size:11px;line-height:1.35}
+.scene-navigation,.scene-navigation button{font-size:12px}
+.scene-navigation button{min-height:34px;padding:6px 10px}
+.grammar-slot h3{font-size:12px}
+.element-card .element-type{font-size:10px;letter-spacing:.6px}
+.element-card strong{font-size:16px;line-height:1.4}
+.element-table .story-column>.decision{font-size:12px;line-height:1.55}
+.element-table .story-column>.decision p{font-size:11px}
+.element-table .participant[data-seat="human"] .hand-mini{font-size:11px}
+.element-table .hand-card .card-category,.element-table .hand-card .card-status{font-size:9px}
+.element-table .hand-card .card-desc{font-size:10px}
+.element-table .composer>p,.element-table .compose-tools{font-size:12px;line-height:1.65}
+
+@media(max-width:420px){
+  body.element-table{--ai-overlay-top:clamp(154px,24dvh,205px);--ai-overlay-gap:clamp(68px,9dvh,82px)}
+  .element-table .participant:not([data-seat="human"]){width:68px!important}
+  .element-table .participant:not([data-seat="human"]) .avatar{width:40px;height:40px;font-size:18px}
+  .element-table .participant:not([data-seat="human"]) .participant-name{font-size:10px}
+  .element-table .participant:not([data-seat="human"]) .opponent-hand{font-size:10px;min-width:38px;height:17px;padding:2px 6px}
+  .element-card strong{font-size:14px}
+  .element-card .element-type{font-size:9px}
+}
+@media(max-height:590px){
+  body.element-table{--ai-overlay-top:118px;--ai-overlay-gap:66px}
+  .element-table .story-text{font-size:15px}
+  .element-card strong{font-size:14px}
+  .scene-navigation,.scene-navigation button{font-size:11px}
+}
+
+/* Storybook table direction -------------------------------------------------
+   The play page is treated as one illustrated card face: a forest-green
+   board, a map header, a parchment story sheet, and framed scene cards. */
+body.element-table{
+  --storybook-ink:#183a35;
+  --storybook-green:#0f3d36;
+  --storybook-green-deep:#092b2b;
+  --storybook-paper:#f1e3c2;
+  --storybook-paper-dark:#d2bd8d;
+  --storybook-gold:#bd9a59;
+  background:
+    radial-gradient(circle at 50% 18%,#2c665444,transparent 33%),
+    linear-gradient(180deg,#123c36 0%,#0b302e 50%,#082526 100%);
+  color:#f0e4c4;
+}
+body.element-table:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse at center,transparent 46%,#041c1b80 100%)}
+body.element-table:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.22;background:repeating-linear-gradient(12deg,transparent 0 5px,#e2c88b08 5px 6px)}
+.storybook-backdrop{display:none;position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+body.element-table .storybook-backdrop{display:block}
+.storybook-map{position:absolute;top:0;left:0;width:100%;height:clamp(112px,18dvh,165px);opacity:.98}
+.storybook-map .map-land{fill:#2c5a43;stroke:#0a302e;stroke-width:3}
+.storybook-map .map-river{fill:none;stroke:#78a994;stroke-width:7;stroke-linecap:round;opacity:.75}
+.storybook-map .map-road{fill:none;stroke:#be995b;stroke-width:4;stroke-dasharray:12 10;stroke-linecap:round;opacity:.9}
+.storybook-map .map-castle{fill:#c69a58;stroke:#3d2f27;stroke-width:3}
+.storybook-map .map-trees{fill:#173d32;stroke:#b79559;stroke-width:2}
+.storybook-vines{position:absolute;left:-1px;top:100px;bottom:calc(var(--hand-height) + 12px);width:72px;fill:none;stroke:#6f9a68;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;opacity:.88}
+.storybook-vines path+path{stroke:#90a864;stroke-width:4}
+.storybook-vines.right{left:auto;right:-1px;transform:scaleX(-1)}
+.element-table .masthead{position:relative;z-index:25;height:clamp(68px,12dvh,108px);padding:12px 18px 0;align-items:flex-start;background:linear-gradient(#062421aa,transparent);border-bottom:0}
+.element-table .brand{color:#f1e3c2;text-shadow:0 2px 0 #0b2824;font-family:"Songti SC",SimSun,serif;font-size:20px;letter-spacing:4px}
+.element-table .brand-mark{width:31px;height:34px;border-color:#c39b58;color:#f0d48b;font-size:22px;background:#703f3b66;box-shadow:2px 3px 0 #271f1c}
+.element-table .brand small{font-size:8px;color:#d5be8d;letter-spacing:2px}
+.element-table .edition{color:#ead8ac;font-size:9px;text-shadow:0 1px 2px #071b19}
+.element-table .status-dot{background:#dfb96b;box-shadow:0 0 12px #e4c47c}
+.element-table .header-actions{gap:4px;align-items:flex-start}
+.element-table .header-actions .quiet-button,.element-table .header-actions .icon-button{padding:6px 7px;color:#f2dfb7;font-family:"Songti SC",SimSun,serif;font-size:11px;text-shadow:0 1px 2px #071b19}
+.element-table .header-actions .icon-button{font-size:19px}
+.element-table>.mode-note{position:absolute;z-index:24;top:clamp(70px,11dvh,102px);left:18px;right:18px;padding:0;color:#e7d3a2;font-size:9px;text-align:left;text-shadow:0 1px 2px #061c1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.element-table>#mode-note + .mode-note{top:clamp(70px,11dvh,102px);left:auto;right:18px;text-align:right}
+.element-table>#mode-note + .mode-note .secondary-button{min-height:0;padding:4px 9px;border:1px solid #c7a563;background:#5d3d31d9;color:#f5dfae;border-radius:999px;font-size:9px}
+.element-table .table-shell{position:static;z-index:5;margin:0;padding:0;max-width:none;min-height:100%}
+.element-table .story-column{top:clamp(118px,19dvh,164px);left:18px;right:18px;bottom:calc(var(--hand-height) + 12px);gap:8px;z-index:8}
+.element-table .story-surface{flex:0 1 100%;min-height:0;margin:0;overflow:visible}
+.element-table .story-paper,.element-table.authoring .composer{position:relative;border:3px solid #c9a86d;border-radius:15px;color:var(--storybook-ink);background:
+  radial-gradient(ellipse at 30% 0%,#fff8e7aa,transparent 56%),
+  repeating-linear-gradient(14deg,#9c7b3b08 0 2px,transparent 2px 7px),
+  linear-gradient(145deg,#f6ebd0,#e9d6ae 80%,#d7bd88);
+  box-shadow:inset 0 0 0 3px #fff0c955,inset 0 0 25px #8a653626,0 5px 0 #6f5637,0 10px 18px #04171599;
+}
+.element-table .story-paper,.element-table.authoring .composer{padding-left:58px}
+.element-table .story-paper:before,.element-table.authoring .composer:after{inset:8px;border:1px solid #9a7548aa;border-radius:9px;pointer-events:none}
+.element-table .story-paper:after,.element-table.authoring .composer:before{content:"✦";position:absolute;z-index:6;left:-7px;top:22px;width:45px;height:104px;padding-top:24px;box-sizing:border-box;text-align:center;color:#efcf89;font:22px/1 "Songti SC",serif;background:linear-gradient(90deg,#7d3239,#a24f48 65%,#6e2d34);border:2px solid #d0a66a;box-shadow:3px 4px 0 #3d2924;clip-path:polygon(0 0,100% 0,100% 86%,50% 100%,0 86%)}
+.element-table .chapter-heading{position:relative;z-index:3;padding:0 12px;margin:0;align-items:flex-start;text-align:left}
+.element-table .chapter-heading h1{font-size:clamp(20px,5vw,29px);letter-spacing:4px;color:#1c3934;text-shadow:0 1px #fff7df;margin:3px 0 0}
+.element-table .story-paper .phase-pill{background:#ceb17b66;border:1px solid #967445;color:#5d4630;font-size:10px;font-weight:600}
+.element-table .paper-top{position:relative;z-index:3;color:#5a6659;font-size:11px;border-bottom:1px solid #9e82555e;padding:0 12px 6px}
+.element-table .story-paper .story-text{position:relative;z-index:3;color:#233a35;font-size:clamp(17px,3.8vw,22px);line-height:1.75;text-align:left}
+.element-table .story-paper .story-reading{padding:3px 13px 8px}
+.element-table.authoring .composer{flex:1 1 100%;min-height:0;padding:18px 22px;overflow:auto}
+.element-table.authoring .composer{padding-left:58px}
+.element-table.authoring .composer:before{top:20px}
+.element-table.authoring .compose-heading,.element-table.authoring .composer>p,.element-table.authoring .composer textarea,.element-table.authoring .compose-tools,.element-table.authoring .feedback{position:relative;z-index:7}
+.element-table.authoring .compose-heading h2{font-family:"Songti SC",SimSun,serif;font-size:clamp(20px,5vw,29px);letter-spacing:3px;color:#1b3d36;margin:0 0 7px}
+.element-table.authoring .compose-heading span{color:#665338;font-size:12px}
+.element-table.authoring .composer>p{margin:4px 0 12px;color:#4b594d;font-size:12px;line-height:1.7}
+.element-table.authoring .composer textarea{min-height:108px;height:145px;border:2px solid #ae956a;background:#f5ecd8cc;color:#29413b;border-radius:7px;padding:12px;font-size:16px;line-height:1.7;box-shadow:inset 0 1px 7px #78603b22}
+.element-table.authoring .composer textarea::placeholder{color:#897b66}
+.element-table.authoring .compose-tools{color:#6e5236;font-size:11px}
+.element-table.authoring .compose-tools .quiet-button{color:#7e483a;text-decoration:underline}
+.element-table .story-column>.action-row{position:relative;z-index:40;gap:8px;padding:0 6px}
+.element-table .story-column>.action-row button,.element-table .card-actions button{border:2px solid #9b7948;border-radius:7px;background:#e8d3a5;color:#24413a;box-shadow:0 3px 0 #6d5035;font-family:"Songti SC",SimSun,serif;font-size:12px;text-shadow:none}
+.element-table .story-column>.action-row .primary-button{background:linear-gradient(#f1d58b,#c49750);font-weight:700}
+.element-table .save-state{color:#d5c08f;font-size:10px;text-align:center}
+
+/* Six target cards: each slot reads like a small illustrated card rather than
+   a generic dark grid cell. */
+.element-table #scene-board{position:relative;z-index:8;min-height:0;padding:2px 3px 0;gap:6px;background:transparent}
+.element-table .scene-navigation{padding:4px 5px;border:2px solid #a9844e;border-radius:999px;background:#174139d9;color:#f1dca8;font-family:"Songti SC",SimSun,serif;font-size:11px;box-shadow:0 3px 0 #082520}
+.element-table .scene-navigation button{border:1px solid #c19a5d;background:#f0d9a0;color:#28483f;font-family:inherit;font-size:11px;min-height:29px}
+.element-table .scene-grid{gap:8px;padding:2px 2px 4px}
+.element-table .grammar-slot{padding:0;border:0;border-radius:10px;background:transparent;box-shadow:none;overflow:visible}
+.element-table .grammar-slot h3{margin:0 0 4px;padding:3px 5px;border:1px solid #b89359;border-radius:999px;background:#e6cf99;color:#4f3b2c;font-family:"Songti SC",SimSun,serif;font-size:10px;line-height:1.1;box-shadow:0 2px 0 #5d4431}
+.element-table .element-list{overflow:visible}
+.element-table .element-card{min-height:108px;padding:22px 7px 8px;border:2px solid #c39b5e;border-radius:11px;color:#f8e8bd;background:linear-gradient(145deg,#28636a,#17454a 76%);box-shadow:inset 0 0 0 3px #f7df9a22,2px 3px 0 #5c4430,0 6px 8px #041916aa;font-family:"Songti SC",SimSun,serif}
+.element-table .element-card:before{inset:5px;border:1px solid #e4c88677;border-radius:6px}
+.element-table .element-card:after{content:"+";top:auto;left:auto;right:6px;bottom:5px;transform:none;width:22px;height:22px;padding:0;border:2px solid #72583a;border-radius:50%;background:#f2dfb6;color:#29463d;font:22px/18px Georgia,serif;box-shadow:none}
+.element-table .element-card .element-type{position:absolute;top:5px;left:5px;right:5px;padding:3px 2px;border-bottom:1px solid #efd69388;color:#f6e2b7;font-size:10px;letter-spacing:0}
+.element-table .element-card strong{font-size:16px;line-height:1.35;text-shadow:0 1px 2px #0c2728}
+.element-table .element-card[data-category="thing"]{background:linear-gradient(145deg,#8c562e,#60341f 76%)}
+.element-table .element-card[data-category="place"]{background:linear-gradient(145deg,#4f7445,#2f5539 76%)}
+.element-table .element-card[data-category="event"]{background:linear-gradient(145deg,#9a4d43,#69332f 76%)}
+.element-table .element-card[data-category="aspect"]{background:linear-gradient(145deg,#526d9e,#354b79 76%)}
+.element-table .element-card[data-category="other"]{background:linear-gradient(145deg,#656b63,#454e4b 76%)}
+
+/* Opponents form a lower illustrated row, leaving the parchment readable. */
+.element-table .participant:not([data-seat="human"]){top:auto!important;bottom:calc(var(--hand-height) + 12px)!important;left:4px!important;width:64px!important;height:68px;z-index:35}
+.element-table .participant[data-seat="ai-a"]{left:4px!important}.element-table .participant[data-seat="ai-b"]{left:76px!important}.element-table .participant[data-seat="ai-c"]{left:148px!important}
+.element-table .participant:not([data-seat="human"]) .avatar{width:38px;height:38px;font-size:18px;border:2px solid #d6b66e;outline:2px solid #29483f;box-shadow:inset 0 0 0 3px #143833,0 4px 0 #4a3327,0 7px 10px #041916aa}
+.element-table .participant:not([data-seat="human"]) .participant-name{font-size:9px;padding:1px 4px;background:#7c4d39;color:#f7dfad;border:1px solid #d3ae67;border-radius:4px;font-family:"Songti SC",SimSun,serif}
+.element-table .participant:not([data-seat="human"]) .opponent-hand{background:#224d43;border-color:#d5b26a;color:#f5deb0;box-shadow:0 2px 0 #472f28}
+
+/* Candle glow and paper hand at the bottom edge. */
+.element-table .hand-section{z-index:30;background:linear-gradient(transparent,#082825cc 35%,#06211f 100%);border-top:1px solid #d0a56755}
+.element-table .hand-section:before{content:"";position:absolute;left:7px;bottom:18px;width:17px;height:47px;border:2px solid #8e7048;border-radius:5px 5px 3px 3px;background:linear-gradient(90deg,#d0a56a,#f5ddaa 45%,#ae7a4f);box-shadow:0 0 25px #f2c26b99}
+.element-table .hand-section:after{content:"✦";position:absolute;left:8px;bottom:64px;color:#f5d27d;font-size:23px;text-shadow:0 0 16px #f5b65f}
+.element-table .hand-card{border:2px solid #b9955b;border-radius:10px;background:linear-gradient(145deg,#2f5b59,#153b3d 75%);box-shadow:inset 0 0 0 3px #efcf8e22,2px 3px 0 #533d2d,0 11px 16px #020f0eaa}
+.element-table .hand-card:before{border:1px solid #e5c37d88}
+.element-table .hand-card .card-name{color:#f3e0b2;text-shadow:0 1px 2px #102725}
+
+@media(max-width:420px){
+  .element-table .story-column{left:13px;right:13px;top:clamp(112px,18dvh,145px)}
+  .element-table .story-paper,.element-table.authoring .composer{border-radius:13px;padding-left:47px;padding-right:17px}
+  .element-table .story-paper:after,.element-table.authoring .composer:before{width:35px;height:82px;top:18px;left:-5px;font-size:17px;padding-top:17px}
+  .element-table .element-card{min-height:94px;padding-top:20px}
+  .element-table .element-card strong{font-size:14px}
+  .element-table .element-card .element-type{font-size:9px}
+  .element-table .participant:not([data-seat="human"]){bottom:calc(var(--hand-height) + 8px)!important}
+  .element-table .participant[data-seat="ai-b"]{left:72px!important}.element-table .participant[data-seat="ai-c"]{left:140px!important}
+}
+
+/* Compact storybook table layout.  The reference uses a shallow chapter
+   sheet, a fixed six-cell play area, and a bottom player row; keep those
+   regions stable while the hand remains anchored. */
+body.element-table .storybook-map{height:clamp(76px,11dvh,100px)}
+.element-table .masthead{height:clamp(54px,9dvh,72px);padding:8px 15px 0}
+.element-table>.mode-note{top:clamp(58px,9dvh,76px)}
+.element-table>#mode-note + .mode-note{top:clamp(58px,9dvh,76px)}
+.element-table .story-column{box-sizing:border-box;top:clamp(92px,14dvh,118px);padding-right:0;bottom:calc(var(--hand-height) + 10px);gap:6px;z-index:35}
+.element-table .story-surface{flex:0 0 clamp(150px,28dvh,225px);min-height:0;overflow:visible}
+.element-table .story-paper{height:100%;box-sizing:border-box}
+.element-table #scene-board{flex:1 1 0;min-height:170px;max-height:240px;gap:5px}
+.element-table .scene-navigation{display:flex;justify-content:flex-start;gap:6px;min-height:34px;padding:4px 6px}
+.element-table .scene-navigation:before{content:"选择场景元素";margin-right:auto;font:600 13px/1.2 "Songti SC",SimSun,serif;color:#f1dca8;white-space:nowrap}
+.element-table .scene-navigation span{margin-left:0;font-size:11px;color:#dbc890;white-space:nowrap}
+.element-table .scene-navigation button{min-height:29px;padding:4px 8px;white-space:nowrap}
+.element-table .scene-grid{flex:1 1 0;min-height:0;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:6px}
+.element-table .grammar-slot{min-height:0}
+.element-table .element-card{height:100%;min-height:64px;box-sizing:border-box}
+
+/* The two progression actions share a vertical rail with the opponent row. */
+.element-table .story-column>.action-row{position:absolute;left:50%;right:auto;top:auto;bottom:0;width:min(180px,42%);display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:0;z-index:50}
+.element-table .story-column>.action-row button{width:100%;min-height:34px;margin:0;padding:6px 7px;font-size:11px}
+.element-table .story-column>.action-row #secondary{order:1}
+.element-table .story-column>.action-row #primary{order:2}
+.element-table .participant:not([data-seat="human"]){bottom:calc(var(--hand-height) + 10px)!important;top:auto!important}
+.element-table .participant:not([data-seat="human"]){z-index:70}
+.element-table:not(.authoring) .participant:not([data-seat="human"]){bottom:var(--hand-height)!important;height:50px}
+.element-table:not(.authoring) .participant:not([data-seat="human"]) .avatar{width:30px;height:30px;font-size:14px}
+.element-table:not(.authoring) .participant:not([data-seat="human"]) .participant-name{font-size:8px;padding:1px 3px}
+.element-table:not(.authoring) .participant:not([data-seat="human"]) .opponent-hand{font-size:9px;min-width:30px;height:14px;padding:1px 4px}
+.element-table.authoring .composer{flex:0 0 clamp(240px,43dvh,360px)}
+.element-table.authoring #decision{display:none!important}
+.element-table.authoring .participant:not([data-seat="human"]){bottom:calc(var(--hand-height) + 55px)!important;top:auto!important}
+
+@media(max-width:740px){
+  .element-table .story-surface{flex-basis:clamp(142px,27dvh,190px)}
+  .element-table #scene-board{min-height:145px;max-height:190px}
+  .element-table .scene-navigation:before{font-size:12px}
+  .element-table .story-column>.action-row{width:min(165px,42%)}
+}
+@media(max-height:590px){
+  body.element-table .storybook-map{height:70px}
+  .element-table .masthead{height:50px}
+  .element-table>.mode-note,.element-table>#mode-note + .mode-note{top:52px}
+  .element-table .story-column{top:78px;padding-right:0}
+  .element-table .story-surface{flex-basis:132px}
+  .element-table #scene-board{min-height:120px;max-height:160px}
+  .element-table .story-column>.action-row{width:min(140px,42%)}
+}
+
+@media(max-height:740px){
+  .element-table:not(.authoring) .participant:not([data-seat="human"]){bottom:calc(var(--hand-height) - 42px)!important}
+}
+
+/* Keep the board full width.  Skip is a floating control below the sentence
+   pager, while the two authoring controls sit beside the AI avatars. */
+.element-table .skip-transition{right:10px;top:calc(clamp(92px,14dvh,118px) + clamp(142px,27dvh,228px) + 38px);width:54px;min-height:52px;z-index:55}
+@media(max-height:590px){.element-table .skip-transition{top:calc(78px + 132px + 34px);right:7px;width:48px;min-height:44px}}
+
+/* Flex layout for the player controls and scene targets.  The previous
+   absolute-positioned opponent rules are intentionally overridden here so
+   the row owns its own space and the six target cells keep a stable grid. */
+.element-table .player-row{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:calc(var(--hand-height) + 2px);
+  z-index:auto;
+  display:flex;
+  align-items:flex-end;
+  gap:clamp(12px,4vw,28px);
+  min-height:52px;
+  pointer-events:none;
+}
+.element-table .player-row .participants{
+  position:relative;
+  z-index:20;
+  --portrait-size:clamp(48px,9vw,72px);
+  display:flex;
+  flex:1 1 auto;
+  align-items:flex-end;
+  gap:clamp(5px,2vw,12px);
+  min-width:0;
+  min-height:calc(var(--portrait-size) + 28px);
+  padding:4px 0;
+  border:0;
+  background:none;
+  box-shadow:none;
+  pointer-events:none;
+}
+.element-table .player-row .participant{
+  position:relative!important;
+  inset:auto!important;
+  transform:none!important;
+  width:auto!important;
+  min-width:0;
+  height:calc(var(--portrait-size) + 24px)!important;
+  display:flex!important;
+  flex:1 1 0;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:0;
+  overflow:visible;
+  pointer-events:none;
+}
+.element-table .player-row .participant[data-seat="human"]{display:none!important}
+.element-table .player-row .participant:not([data-seat="human"]){inset:auto!important}
+.element-table .player-row .participant:not([data-seat="human"]) .avatar{flex:0 0 var(--portrait-size);width:var(--portrait-size);height:var(--portrait-size);font-size:calc(var(--portrait-size) * .43);border-radius:50%}
+.element-table .player-row .participant:not([data-seat="human"]) .participant-info{flex:0 0 auto;width:calc(100% - 14px);max-width:94px;min-width:0;margin-top:-3px;margin-right:10px;overflow:visible}
+.element-table .player-row .participant:not([data-seat="human"]) .participant-name{display:block;font-size:12px;line-height:20px;padding:1px 10px 1px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid #b89660;border-radius:3px 3px 7px 7px;background:linear-gradient(#f3e1b9,#d7bb86);color:#203a32;box-shadow:0 3px 0 #59432d,0 5px 7px #04191688}
+.element-table .player-row .participant:not([data-seat="human"]) .opponent-hand{position:absolute;z-index:4;left:auto;right:0;top:auto;bottom:0;flex:none;flex-direction:column;gap:3px;width:32px;min-width:32px;height:43px;margin:0;padding:4px 2px;box-sizing:border-box;border:1px solid #d5b26a;border-radius:10px 10px 8px 8px;background:linear-gradient(#234b42,#102f2c);font-size:11px;white-space:nowrap;pointer-events:none}
+.element-table .player-row .participant:not([data-seat="human"]) .opponent-hand:before{content:"";display:block;width:18px;height:16px;background:repeating-linear-gradient(100deg,#dfc590 0 4px,transparent 4px 7px);clip-path:polygon(0 0,100% 8%,85% 100%,15% 100%)}
+.element-table .player-actions{
+  position:relative;
+  z-index:75;
+  display:flex;
+  flex:0 1 180px;
+  min-width:130px;
+  max-width:180px;
+  align-self:flex-end;
+  pointer-events:auto;
+}
+.element-table .player-actions .action-row{
+  position:static!important;
+  display:flex;
+  flex:1 1 auto;
+  flex-direction:column;
+  align-items:stretch;
+  gap:5px;
+  margin:0;
+  padding:0;
+}
+.element-table .player-actions .action-row button{width:100%;min-height:34px;margin:0;padding:6px 7px;font-size:11px}
+.element-table .player-actions .action-row #secondary{order:1}
+.element-table .player-actions .action-row #primary{order:2}
+.element-table .scene-grid{
+  display:flex;
+  flex-wrap:wrap;
+  align-content:stretch;
+  align-items:stretch;
+  gap:6px;
+  min-height:0;
+}
+.element-table .scene-grid .grammar-slot{
+  flex:1 1 calc(33.333% - 4px);
+  width:calc(33.333% - 4px);
+  height:calc(50% - 3px);
+  min-width:0;
+  min-height:0;
+}
+.element-table .scene-grid .element-list{display:flex;flex:1 1 auto;min-height:0;min-width:0}
+.element-table .scene-grid .element-card{
+  display:flex;
+  flex:1 1 auto;
+  min-height:0;
+  height:auto;
+  align-items:center;
+  justify-content:center;
+}
+@media(max-width:740px){
+  .element-table .player-row{left:13px;right:13px;gap:10px}
+  .element-table .player-actions{flex-basis:165px;min-width:132px}
+  .element-table .player-row .participant{gap:0}
+}
+@media(max-width:420px){
+  .element-table .player-row{gap:8px}
+  .element-table .player-row .participants{--portrait-size:42px;gap:5px}
+  .element-table .player-actions{flex-basis:112px;min-width:100px}
+  .element-table .player-row .participant:not([data-seat="human"]) .participant-info{width:100%;margin-right:0}
+  .element-table .player-row .participant:not([data-seat="human"]) .participant-name{font-size:10px;padding-right:12px}
+  .element-table .player-row .participant:not([data-seat="human"]) .opponent-hand{right:-3px;bottom:16px;width:25px;min-width:25px;height:34px;font-size:9px;gap:2px;padding:3px 1px}
+  .element-table .player-row .participant:not([data-seat="human"]) .opponent-hand:before{width:14px;height:12px}
+}
+@media(max-height:740px){.element-table .player-row{bottom:calc(var(--hand-height) - 42px)}}
+@media(max-height:590px){
+  .element-table .player-row{bottom:calc(var(--hand-height) - 34px)}
+  .element-table .player-actions{flex-basis:140px;min-width:112px}
+}
+
+/* The red bookmark was decorative only.  Remove its reserved gutter so the
+   story copy uses the full parchment width and aligns with the paper frame. */
+.element-table .story-paper:after,
+.element-table.authoring .composer:before{
+  content:none!important;
+  display:none!important;
+  visibility:hidden!important;
+}
+.element-table .story-paper,
+.element-table.authoring .composer{
+  padding-left:24px!important;
+  padding-right:24px!important;
+}
+.element-table .story-paper .chapter-heading,
+.element-table .story-paper .paper-top{
+  padding-left:8px;
+  padding-right:8px;
+}
+
+/* Result ownership is announced transiently so the story sheet stays clear. */
+.game-toast{
+  position:fixed;
+  z-index:140;
+  right:14px;
+  top:clamp(210px,36dvh,340px);
+  max-width:min(260px,calc(100vw - 28px));
+  padding:10px 15px;
+  border:1px solid #d9b66e;
+  border-radius:7px 0 0 7px;
+  background:linear-gradient(135deg,#f0d69b,#bd8e4f);
+  color:#243a34;
+  box-shadow:0 4px 0 #60452f,0 9px 20px #031613aa;
+  font:600 13px/1.45 "Songti SC",SimSun,serif;
+  text-align:center;
+  opacity:0;
+  transform:translateX(calc(100% + 24px));
+  pointer-events:none;
+  transition:transform .24s cubic-bezier(.2,.8,.2,1),opacity .2s ease;
+}
+.game-toast.show{opacity:1;transform:translateX(0)}
+@media(max-width:420px){
+  .game-toast{right:9px;top:clamp(195px,34dvh,300px);max-width:210px;padding:8px 11px;font-size:11px}
+}
+@media(max-width:420px){
+  .element-table .story-paper,
+  .element-table.authoring .composer{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+}
